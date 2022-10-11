@@ -8,7 +8,7 @@ const Cards = () => {
     console.log(cards)
     return (
         <div>
-            <h1>hi{cards.length}</h1>
+           
 
             <div className='card-grid'>
             {

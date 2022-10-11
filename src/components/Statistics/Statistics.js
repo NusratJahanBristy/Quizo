@@ -23,7 +23,7 @@ const Statistics = () => {
     }, [])
     return (
         <div>
-            <h2>Statisics</h2>
+            <h1>Statisics</h1>
             <ResponsiveContainer width="100%" height={500}>
                 <BarChart width={150} height={40} data={chart}>
                     <Bar dataKey="total" fill="#008000" />
@@ -32,7 +32,7 @@ const Statistics = () => {
                     <YAxis />
                 </BarChart>
             </ResponsiveContainer>
-            <p>hhk</p>
+           
         </div>
     );
 };

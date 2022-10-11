@@ -50,7 +50,7 @@ function App() {
           element: <Quizs></Quizs>
         },
         {
-          path: '*', element: <div>this is not found</div>
+          path: '*', element: <div>This is page is not found 404</div>
         }
 
       ]
@@ -60,11 +60,8 @@ function App() {
     <div className="App">
       <RouterProvider router={router}></RouterProvider>
       {/* <Header></Header> */}
+      <ToastContainer position='top-center'></ToastContainer>
      
-
-
-
-
 
 
     </div>

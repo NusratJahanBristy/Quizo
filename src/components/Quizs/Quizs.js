@@ -9,8 +9,7 @@ const Quizs = () => {
 
     return (
         <div className=''>
-            {/* {/* <h3>quiz</h3> */}
-              {/* <h3>{quizs.question}</h3> */}
+            
              {
                 quizs.map(quiz=>
                 <Quiz key={quiz.id}
