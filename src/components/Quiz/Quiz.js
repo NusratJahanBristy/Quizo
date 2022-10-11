@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 
 
 const Quiz = ({ quiz }) => {
-    const { id, question, options, correctAnswer } = quiz;
+    const { question, options, correctAnswer } = quiz;
     const showAnswer = (ans) => {
         toast.info(ans, { autoClose: 2000 })
         console.log(ans)
@@ -23,18 +23,20 @@ const Quiz = ({ quiz }) => {
         }
     }
     return (
-        <div className='bg-success container position-relative'>
+        <div className='bg-success container m-5 p-5 text-white '>
 
-           <div> <h4>id:{question}</h4>
-           <FontAwesomeIcon onClick={() => showAnswer(correctAnswer)} className='position-absolute end-0' icon={faEye} /></div>
-            <div className='row row-cols-2'>
-                
-                    {
-                        options.map(option => <li  onClick={(e) => checkAnswer(e)}>{option}</li>)
+            <div className='d-flex flex-coloum justify-content-between align-items-center'>
+                <h4>id:{question.slice(3,-4)}</h4>
+                <FontAwesomeIcon onClick={() => showAnswer(correctAnswer)} className=' ' icon={faEye} />
+            </div>
+            <div className='row row-cols-2 mt-5 g-3'>
 
-                    }
-              
-               
+                {
+                    options.map(option => <li onClick={(e) => checkAnswer(e)}>{option}</li>)
+
+                }
+
+
             </div>
 
         </div>
