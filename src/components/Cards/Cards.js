@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import Card from '../Card/Card';
+import Cardd from '../Cardd/Cardd';
+import './Cards.css'
 
 const Cards = () => {
     const cards = useLoaderData().data;
@@ -9,12 +10,14 @@ const Cards = () => {
         <div>
             <h1>hi{cards.length}</h1>
 
+            <div className='card-grid'>
             {
-                cards.map(card =>
-                    <Card key={card.id} 
-                    card={card}></Card>
+                cards.map(cardd =>
+                    <Cardd key={cardd.id} 
+                    cardd={cardd}></Cardd>
                 )
             }
+            </div>
         </div>
     );
 };

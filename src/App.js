@@ -9,6 +9,8 @@ import Blog from './components/Blog/Blog';
 import Home from './components/Home/Home';
 import Navbars from './components/Navbar/Navbar';
 import Cards from './components/Cards/Cards';
+import Quizs from './components/Quizs/Quizs';
+
 
 
 
@@ -18,24 +20,20 @@ function App() {
       path: '/',
       element: <Main></Main>,
       children: [
-        // {
-        //   path: '/',
-        //   element: <Home></Home>
-        // },
         {
-          path: '/home',
+          path: '/',
           loader: async () => {
-            return fetch(' https://openapi.programming-hero.com/api/quiz')
+            return fetch('https://openapi.programming-hero.com/api/quiz')
           },
           element: <Home></Home>
         },
-        // {
-        //   path: 'cards',
-        //   loader: async () => {
-        //     return fetch(' https://openapi.programming-hero.com/api/quiz')
-        //   },
-        //   element: <Cards></Cards>
-        // },
+        {
+          path: '/home',
+          loader: async () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz')
+          },
+          element: <Home></Home>
+        },
         {
           path: 'Statistics',
           element: <Statistics></Statistics>
@@ -43,6 +41,14 @@ function App() {
         {
           path: 'blog',
           element: <Blog></Blog>
+        },
+        {
+          path: '/cardd/:carddId',
+          loader:async({params})=>{
+            // console.log(params.carddId)
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.carddId}`)
+          },
+          element: <Quizs></Quizs>
         },
         {
           path: '*', element: <div>this is not found</div>
@@ -55,6 +61,7 @@ function App() {
     <div className="App">
       <RouterProvider router={router}></RouterProvider>
       {/* <Header></Header> */}
+     
 
 
 
