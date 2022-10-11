@@ -8,7 +8,7 @@ const Statistics = () => {
         axios.get('https://openapi.programming-hero.com/api/quiz')
             .then(data => {
                 const chart = data.data.data;
-
+console.log(chart)
                 const chartData = chart.map(chart => {
                     const singleChart = {
                         name: chart.name,

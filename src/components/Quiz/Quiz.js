@@ -13,25 +13,28 @@ const Quiz = ({ quiz }) => {
         toast.info(ans, { autoClose: 2000 })
         console.log(ans)
     }
-    const checkAnswer=(e)=>{
-        const value=e.target.innerText
-        if(value===correctAnswer){
-            toast.success('Your ans is correct',{autoClose:3000})
+    const checkAnswer = (e) => {
+        const value = e.target.innerText
+        if (value === correctAnswer) {
+            toast.success('Your ans is correct', { autoClose: 3000 })
         }
-        else{
-            toast.error('Your ans is incorrect',{autoClose:3000})
+        else {
+            toast.error('Your ans is incorrect', { autoClose: 3000 })
         }
     }
     return (
-        <div className='container position-relative'>
+        <div className='bg-success container position-relative'>
 
-            <h4>id:{question}</h4>
-            <div className='d-flex p-5 m-5 justify-content-md-around'>
-                {
-                    options.map(option => <li onClick={(e)=>checkAnswer(e)}>{option}</li>)
+           <div> <h4>id:{question}</h4>
+           <FontAwesomeIcon onClick={() => showAnswer(correctAnswer)} className='position-absolute end-0' icon={faEye} /></div>
+            <div className='row row-cols-2'>
+                
+                    {
+                        options.map(option => <li  onClick={(e) => checkAnswer(e)}>{option}</li>)
 
-                }
-                <FontAwesomeIcon onClick={() => showAnswer(correctAnswer)} className='position-absolute end-0' icon={faEye} />
+                    }
+              
+               
             </div>
 
         </div>

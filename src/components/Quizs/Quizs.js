@@ -9,7 +9,6 @@ const Quizs = () => {
 
     return (
         <div className=''>
-            
              {
                 quizs.map(quiz=>
                 <Quiz key={quiz.id}
@@ -19,5 +18,4 @@ const Quizs = () => {
         </div>
     );
 };
-
 export default Quizs;

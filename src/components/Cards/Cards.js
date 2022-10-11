@@ -7,9 +7,7 @@ const Cards = () => {
     const cards = useLoaderData().data;
     console.log(cards)
     return (
-        <div>
-           
-
+        <div className=''>
             <div className='card-grid'>
             {
                 cards.map(cardd =>
