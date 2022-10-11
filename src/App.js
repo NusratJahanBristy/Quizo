@@ -2,14 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './layouts/Main';
-import Header from './components/Header/Header';
 import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
 
 import Home from './components/Home/Home';
-import Navbars from './components/Navbar/Navbar';
-import Cards from './components/Cards/Cards';
 import Quizs from './components/Quizs/Quizs';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
