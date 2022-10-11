@@ -23,7 +23,7 @@ const Quiz = ({ quiz }) => {
         }
     }
     return (
-        <div className='bg-success container m-5 p-5 text-white '>
+        <div className='bg-success  m-5 p-5 text-white '>
 
             <div className='d-flex flex-coloum justify-content-between align-items-center'>
                 <h4>id:{question.slice(3,-4)}</h4>
