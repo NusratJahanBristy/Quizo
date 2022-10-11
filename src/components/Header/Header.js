@@ -1,5 +1,4 @@
 import React from 'react';
-import img from '../../img/header.jpg'
 import './Header.css'
 
 const Header = () => {
@@ -15,8 +14,6 @@ const Header = () => {
             </div>
 
         </div>
-
-
     );
 };
 

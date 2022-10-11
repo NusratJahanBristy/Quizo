@@ -4,7 +4,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import './Navbar.css'
 
-
 function Navbars() {
   return (
     <Navbar bg="light" expand="lg" >

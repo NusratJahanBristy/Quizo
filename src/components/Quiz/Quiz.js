@@ -1,11 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
-import { Button } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-
-
 
 const Quiz = ({ quiz }) => {
     const { question, options, correctAnswer } = quiz;
@@ -24,18 +20,15 @@ const Quiz = ({ quiz }) => {
     }
     return (
         <div className='bg-success  m-5 p-5 text-white '>
-
             <div className='d-flex flex-coloum justify-content-between align-items-center'>
                 <h4>id:{question.slice(3,-4)}</h4>
                 <FontAwesomeIcon onClick={() => showAnswer(correctAnswer)} className=' ' icon={faEye} />
             </div>
             <div className='row row-cols-2 mt-5 g-3'>
-
                 {
                     options.map(option => <li onClick={(e) => checkAnswer(e)}>{option}</li>)
 
                 }
-
 
             </div>
 

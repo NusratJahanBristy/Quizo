@@ -10,9 +10,6 @@ import Quizs from './components/Quizs/Quizs';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
-
-
 function App() {
   const router = createBrowserRouter([
     {
@@ -59,11 +56,7 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router}></RouterProvider>
-      {/* <Header></Header> */}
       <ToastContainer position='top-center'></ToastContainer>
-     
-
-
     </div>
   );
 }

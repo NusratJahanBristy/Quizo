@@ -2,8 +2,6 @@ import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import { Link } from 'react-router-dom';
-import './Cardd.css'
-
 
 function Cardd({cardd}) {
     const {id, name,logo} = cardd;
@@ -11,7 +9,7 @@ function Cardd({cardd}) {
     <CardGroup className='px-2 mx-4 my-5'>
       <Card>
         {/* <Card.Img variant="top" src="holder.js/100px160" /> */}
-        <Card.Body>
+        <Card.Body className='bg-success'>
           <img className='img-fluid' src={logo} alt="" />
         </Card.Body>
         <Card.Footer >
