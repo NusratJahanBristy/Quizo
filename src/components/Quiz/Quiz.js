@@ -7,11 +7,11 @@ const Quiz = ({ quiz }) => {
     const { question, options, correctAnswer } = quiz;
     const showAnswer = (ans) => {
         toast.info(ans, { autoClose: 2000 })
-        console.log(ans)
+        
     }
-    const checkAnswer = (e) => {
-        const value = e.target.innerText
-        if (value === correctAnswer) {
+    const checkAnswer = (option) => {
+       
+        if (option === correctAnswer) {
             toast.success('Your ans is correct', { autoClose: 3000 })
         }
         else {
@@ -26,7 +26,7 @@ const Quiz = ({ quiz }) => {
             </div>
             <div className='row row-cols-2 mt-5 g-3'>
                 {
-                    options.map(option => <li onClick={(e) => checkAnswer(e)}>{option}</li>)
+                    options.map(option => <li onClick={() => checkAnswer(option)}>{option}</li>)
 
                 }
 
